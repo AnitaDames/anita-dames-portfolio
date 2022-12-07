@@ -1,7 +1,11 @@
 
-// media = document.querySelector(".media");
-// media.onclick = function() {
-//     navbar = document.querySelector(".nav-bar");
-//     navBar.classlist.toggle("active");
-// }
+const active = window.location.pathname;
+const navLinks = document.querySelectorAll('nav a').
+forEach(link => {
+   if(link.href.includes(`${active}`)) {
+    link.classList.add('active');
+   }
+})
+
+
 
