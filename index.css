@@ -10,9 +10,56 @@
 html {
     font-family: 'Montserrat';
     font-size: 16px;
-
-
+    scroll-behavior: smooth;
 }
+
+:root {
+    --typewriterSpeed: 6s;
+}
+
+
+.welcome { 
+color: #9b2020;
+width: 1450px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+h1 {
+font-size: 50px;
+font-weight: 500;
+position: relative;
+padding: 10px 0px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1::before,
+h1::after {
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
+
+h1::before {
+    background: white;
+    animation: typewriter 4s steps(26) 1s forwards;
+}
+
+h1::after {
+    width: 0.125em;
+    animation: typewriter 4s steps(26) 1s forwards; 
+}
+
+@keyframes typewriter {
+    to {
+        left: 100%;
+    }
+}
+
 
 header {
     padding: 10px;
@@ -40,9 +87,7 @@ header:hover {
 
 
 body {
-    background-color: #9b2020;
-    /* margin: 0;
-    padding: 0;  */
+    background-color: #9b2020;  
     
 }
 
@@ -85,13 +130,13 @@ nav ul li {
     margin-right: 50px;
     
 }
-
+a:is(:link, :active, :visited).active {
+    color: white;
+}
 
 nav a:hover {
-    color: red;
-    
+    color: red;  
 } 
-
 
 
 .container {
@@ -104,7 +149,7 @@ nav a:hover {
     
 }
 
-.left {
+.left-frame {
     width: 100%;
     height: 600px;
     background: url("images/anitalogoinitials/anitadisplayphoto1.jpeg") no-repeat center / cover;
@@ -114,7 +159,7 @@ nav a:hover {
 }
 
 
-.right {
+.right-frame {
     width: 100%;
     min-height: 400px;
     background-color: white;
@@ -134,21 +179,21 @@ nav a:hover {
 }
 
 
-.right h1 {
+.right-frame h1 {
     font-size: 40px;
     font-weight: lighter;
     color: red;
-
+    
 }
 
-.right h2 {
+.right-frame h2 {
     font-size: 20px;
     font-weight: lighter;
     color: #9b2020;
 
 }
 
-.right p {
+.right-frame p {
     margin: 20px 0;
     font-weight: 300;
     line-height: 25px;
@@ -156,7 +201,7 @@ nav a:hover {
 
 }
 
-.right a {
+.right-frame a {
     text-decoration: none;
     text-transform: uppercase;
     background-color: black ;
@@ -172,7 +217,7 @@ nav a:hover {
 }
 
 
-.right a:hover {
+.right-frame a:hover {
     color: red;
     
 } 
@@ -293,10 +338,10 @@ margin-bottom: 25px;
 
 .contact-me {
     width: 100%;
-    padding: 100px opx; 
+    padding: 100px 0px; 
 }
 
-.make-contact h6 {
+.make-contact h5 {
     color: white;
     font-size: 50px;
     width: 1130px;
@@ -307,12 +352,11 @@ margin-bottom: 25px;
 .icons i {
     font-size: 60px;
     display: inline-block;
-    margin: 25px opx;
+    margin: 25px 0px;
     color:white;
     line-height: 75px;
+    width: 25px;
     
-    
-
 }
 
 .icons {
@@ -337,7 +381,6 @@ margin-bottom: 25px;
     align-items: center;
     flex-direction: column;
     background: white;
-    
 }
 
 
@@ -351,8 +394,6 @@ margin-bottom: 25px;
     font-variant: small-caps;
     line-height: 10%;  
 }
-
-
 
 
 
