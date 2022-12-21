@@ -21,6 +21,13 @@
     overflow-x: hidden;
     }
 
+    .make-contact h5 {
+        padding: 10px 0px;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 35px;
+        
+    } 
 } 
 
 @media screen and (max-width: 1320px) and (min-width: 900px) {
@@ -88,7 +95,7 @@
         display: flex;
     } 
 
-    .make-contact h6 {
+    .make-contact h5 {
         padding: 10px 0px;
         border-radius: 5px;
         width: 100%;
@@ -103,5 +110,13 @@
         font-size: 35px;
         
     } 
+
+    html,body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        }
  
 } 
